@@ -37,11 +37,13 @@ public class GestorProcesos extends Thread {
 				}
 				if (dato.startsWith("#1#")) {
 					String[] mensaje = dato.split("#");
-					String encodedString = Base64.getEncoder().encodeToString(mensaje[2].getBytes());
+					String aCodificadar=mensaje[2];
+					String encodedString = Base64.getEncoder().encodeToString(aCodificadar.getBytes());
 					pw.println("#1#"+encodedString);
 				} else if (dato.startsWith("#2#")) {
 					String[] mensaje = dato.split("#");
-					byte[] decodedBytes = Base64.getDecoder().decode(mensaje[2]);
+					String mensajeCodificado=mensaje[2];
+					byte[] decodedBytes = Base64.getDecoder().decode(mensajeCodificado);
 					String decodedString = new String(decodedBytes);
 					pw.println("#2#"+decodedString);
 				}else if(dato.equals("#0#")) {

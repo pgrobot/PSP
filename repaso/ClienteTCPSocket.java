@@ -90,8 +90,7 @@ public class ClienteTCPSocket {
 					System.out.printf("El mensaje recibido ha sido: %s \n", respuesta);
 					System.out.printf("Texto a codificar a base 64: %s \n", mensaje);
 					System.out.printf("Texto codificado en base 64: %s \n", respuesta);
-				}else if(respuesta.startsWith("#2#")) {
-					
+				}else if(respuesta.startsWith("#2#")) {					
 					System.out.printf("El mensaje enviado ha sido: %s \n",mensaje);
 					System.out.printf("El mensaje recibido ha sido: %s \n",respuesta);
 					System.out.printf("Texto a decodificar de 64: %s \n",respuesta);
